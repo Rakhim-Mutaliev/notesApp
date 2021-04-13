@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZs-X5-tBD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZs-X5-tBD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -61,7 +61,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <connections>
-                                            <segue destination="oVX-11-X7d" kind="show" id="Etl-lq-6dK"/>
+                                            <segue destination="oVX-11-X7d" kind="show" id="467-20-P07"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,6 +84,9 @@
                                     <imageReference key="image" image="folder.badge.plus" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNewSectionTapped:" destination="eo1-cG-BLZ" eventType="touchUpInside" id="jID-yO-1pC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JIm-Gd-OMN"/>
@@ -97,9 +100,7 @@
                             <constraint firstItem="fhP-5N-HQb" firstAttribute="top" secondItem="JIm-Gd-OMN" secondAttribute="top" constant="15" id="vUe-qc-mnr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Папки" id="VJb-Rc-eXW">
-                        <barButtonItem key="leftBarButtonItem" title="Править" id="WUX-GZ-n3N"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Папки" id="VJb-Rc-eXW"/>
                     <connections>
                         <outlet property="addNewSection" destination="DKN-ci-b52" id="m1R-ei-eCl"/>
                         <outlet property="tableView" destination="fhP-5N-HQb" id="4aC-Kh-3Ne"/>
@@ -164,7 +165,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p6z-q5-AUg" kind="presentation" id="rzE-je-g47"/>
+                                    <segue destination="p6z-q5-AUg" kind="presentation" identifier="newNote" id="rzE-je-g47"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mR-Rb-w5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.92753623188412" y="44.866071428571423"/>
+            <point key="canvasLocation" x="899" y="45"/>
         </scene>
         <!--Screening Note View Controller-->
         <scene sceneID="MVu-1H-toI">
@@ -212,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfG-rd-Vl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537.68115942029" y="-280.58035714285711"/>
+            <point key="canvasLocation" x="2447.826086956522" y="-280.58035714285711"/>
         </scene>
         <!--Creation Note View Controller-->
         <scene sceneID="KC6-hR-zg2">
@@ -259,6 +260,9 @@
                                 <state key="normal" title="Сохранить">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="p6z-q5-AUg" eventType="touchUpInside" id="cL7-fr-0LR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hZu-QF-IkR"/>
@@ -278,12 +282,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="noteText" destination="wTA-gF-4Kh" id="5jz-Kg-lWz"/>
                         <outlet property="saveNoteButton" destination="qNZ-Bq-Son" id="TU6-5a-UJ2"/>
+                        <outlet property="titleTextField" destination="g6G-WM-8qX" id="GFh-bF-Iue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzO-2G-d7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="445"/>
+            <point key="canvasLocation" x="2447.826086956522" y="444.64285714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

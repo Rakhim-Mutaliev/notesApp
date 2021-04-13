@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12260B962624AB6C00A6040A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12260B952624AB6C00A6040A /* AlertController.swift */; };
 		FA0CBD0A26221BD30077E24F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0CBD0926221BD30077E24F /* NotesViewController.swift */; };
 		FA71DEAA2620E58200B75719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71DEA92620E58200B75719 /* AppDelegate.swift */; };
 		FA71DEAC2620E58200B75719 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71DEAB2620E58200B75719 /* SceneDelegate.swift */; };
@@ -16,13 +17,14 @@
 		FA71DEC62620E8CA00B75719 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71DEC52620E8CA00B75719 /* StartViewController.swift */; };
 		FACEE2A7262344DD0080918A /* CreationNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEE2A6262344DD0080918A /* CreationNoteViewController.swift */; };
 		FACEE2AA26234BBA0080918A /* ScreeningNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEE2A926234BBA0080918A /* ScreeningNoteViewController.swift */; };
-		FACEE2AD2623610A0080918A /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEE2AC2623610A0080918A /* DatabaseModel.swift */; };
+		FACEE2AD2623610A0080918A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEE2AC2623610A0080918A /* Note.swift */; };
 		FACEE2B0262361410080918A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEE2AF262361410080918A /* StorageManager.swift */; };
 		FC836FC1AD99B81031B6EADE /* Pods_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36B307BA993EDBA692742F /* Pods_Note.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B36B307BA993EDBA692742F /* Pods_Note.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Note.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12260B952624AB6C00A6040A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		961638C73D3BFD84018FB9EC /* Pods-Note.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note.debug.xcconfig"; path = "Target Support Files/Pods-Note/Pods-Note.debug.xcconfig"; sourceTree = "<group>"; };
 		D84B1EE8369D4AEF1964CB77 /* Pods-Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Note.release.xcconfig"; path = "Target Support Files/Pods-Note/Pods-Note.release.xcconfig"; sourceTree = "<group>"; };
 		FA0CBD0926221BD30077E24F /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		FA71DEC52620E8CA00B75719 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FACEE2A6262344DD0080918A /* CreationNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationNoteViewController.swift; sourceTree = "<group>"; };
 		FACEE2A926234BBA0080918A /* ScreeningNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeningNoteViewController.swift; sourceTree = "<group>"; };
-		FACEE2AC2623610A0080918A /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
+		FACEE2AC2623610A0080918A /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		FACEE2AF262361410080918A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +54,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12260B8F2624A8F000A6040A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA71DEC52620E8CA00B75719 /* StartViewController.swift */,
+				FA0CBD0926221BD30077E24F /* NotesViewController.swift */,
+				FACEE2A6262344DD0080918A /* CreationNoteViewController.swift */,
+				FACEE2A926234BBA0080918A /* ScreeningNoteViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		12260B902624A8F800A6040A /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FA71DEA92620E58200B75719 /* AppDelegate.swift */,
+				FA71DEAB2620E58200B75719 /* SceneDelegate.swift */,
+				FA71DEB22620E58300B75719 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		12260B912624A90200A6040A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FACEE2AC2623610A0080918A /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12260B922624A90700A6040A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FACEE2AF262361410080918A /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		12260B932624A92600A6040A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA71DEAF2620E58200B75719 /* Main.storyboard */,
+				FA71DEB42620E58300B75719 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		4FF99BCF132BC3554177DDCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,18 +138,13 @@
 		FA71DEA82620E58200B75719 /* Note */ = {
 			isa = PBXGroup;
 			children = (
-				FA71DEA92620E58200B75719 /* AppDelegate.swift */,
-				FA71DEAB2620E58200B75719 /* SceneDelegate.swift */,
-				FA71DEC52620E8CA00B75719 /* StartViewController.swift */,
-				FA0CBD0926221BD30077E24F /* NotesViewController.swift */,
-				FA71DEAF2620E58200B75719 /* Main.storyboard */,
-				FA71DEB22620E58300B75719 /* Assets.xcassets */,
-				FA71DEB42620E58300B75719 /* LaunchScreen.storyboard */,
+				12260B932624A92600A6040A /* Storyboards */,
+				12260B922624A90700A6040A /* Managers */,
+				12260B912624A90200A6040A /* Model */,
+				12260B902624A8F800A6040A /* Supporting files */,
+				12260B8F2624A8F000A6040A /* Screens */,
 				FA71DEB72620E58300B75719 /* Info.plist */,
-				FACEE2A6262344DD0080918A /* CreationNoteViewController.swift */,
-				FACEE2A926234BBA0080918A /* ScreeningNoteViewController.swift */,
-				FACEE2AC2623610A0080918A /* DatabaseModel.swift */,
-				FACEE2AF262361410080918A /* StorageManager.swift */,
+				12260B952624AB6C00A6040A /* AlertController.swift */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -221,11 +264,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0CBD0A26221BD30077E24F /* NotesViewController.swift in Sources */,
+				12260B962624AB6C00A6040A /* AlertController.swift in Sources */,
 				FA71DEAA2620E58200B75719 /* AppDelegate.swift in Sources */,
 				FACEE2A7262344DD0080918A /* CreationNoteViewController.swift in Sources */,
 				FACEE2AA26234BBA0080918A /* ScreeningNoteViewController.swift in Sources */,
 				FA71DEAC2620E58200B75719 /* SceneDelegate.swift in Sources */,
-				FACEE2AD2623610A0080918A /* DatabaseModel.swift in Sources */,
+				FACEE2AD2623610A0080918A /* Note.swift in Sources */,
 				FA71DEC62620E8CA00B75719 /* StartViewController.swift in Sources */,
 				FACEE2B0262361410080918A /* StorageManager.swift in Sources */,
 			);
